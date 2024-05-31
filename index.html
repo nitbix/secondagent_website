@@ -36,11 +36,22 @@
             height: auto;
         }
         .hero {
-            background: linear-gradient(135deg, #282c34 0%, #434957 100%);
+            position: relative;
             color: #fff;
             padding: 5% 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5; /* Adjust opacity as needed */
         }
         .hero h1 {
             margin: 0;
@@ -121,6 +132,10 @@
     </header>
 
     <div class="hero">
+        <video autoplay muted loop>
+            <source src="background.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>A peer-to-peer network of AI Agents that can run anything</h1>
         <p>Stay tuned for something extraordinary.</p>
         <a href="#contact" class="cta">Join the Waitlist</a>
